@@ -16,6 +16,7 @@ Plugin 'wenshuai-xi/Vundle.vim'
 Plugin 'wenshuai-xi/nerdtree.vim'
 Plugin 'wenshuai-xi/taglist.vim'
 Plugin 'wenshuai-xi/indentLine.vim'
+Plugin 'wenshuai-xi/mark.vim'
 Plugin 'wenshuai-xi/minibufexpl.vim'
 Plugin 'wenshuai-xi/YouCompleteMe.vim'
 Plugin 'wenshuai-xi/ack.vim'
@@ -58,8 +59,6 @@ set autoread "设置当文件被改动时自动载入
 set autowrite "自动保存
 set nobackup "从不备份
 set noswapfile "禁止生成临时文件
-nmap <F10> :set paste<cr> " 切换到粘贴模式
-nmap <F11> :set nopaste<cr>
 nmap <silent>nh :nohlsearch<cr> 
 nmap <silent>nm :set nonumber<cr>
 nmap <silent>mn :set number<cr>
@@ -76,6 +75,10 @@ let g:indentLine_char = '¦'
 let g:indentLine_showFirstIndentLevel = 1 
 let g:indentLine_color_term = 125 
 
+"============== mark =================
+nmap <silent><F9> \m
+nmap <silent><F10> \n 
+
 "========== NERDTree ==============
 "let NERDTreeQuitOnOpen = 1
 "autocmd vimenter * NERDTree
@@ -86,7 +89,7 @@ let g:NERDTree_title = "[NERDTree]"
 let NERDChristmasTree = 1
 let NERDTreeAutoCenter = 1
 let NERDTreeShowBookmarks = 0
-let NERDTreeMouseMode = 3 
+let NERDTreeMouseMode = 1 
 let NERDTreeShowHidden = 1
 let NERDTreeMinimalUI = 1
 let NERDTreeWinSize = 20
