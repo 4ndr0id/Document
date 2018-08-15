@@ -147,6 +147,8 @@ let g:syntastic_cpp_remove_include_errors = 1
 "============== cscope ====================
 let g:cscope_open_location = 1
 let g:cscope_auto_update = 0
+let g:cscope_ignored_dir = '\.git$\|\.svn$'
+let g:cscope_interested_files = '\.c$\|\.cpp$\|\.h$\|\.hpp\|\.as\|\.asm\|\.c++\|\.cfg$\|\.conf$\|\.config\|\.cs$\|\.h++\|\.ini\|\.mk$\|\.py\|\.sh\|\.txt\|\.config.*\|config.*\|makefile\|Makefile|\Kconfig'
 nmap <silent> <F12> :call CscopeUpdateDB()<CR>
 nmap <silent> <F2> :call ToggleLocationList()<CR>
 nmap <silent> <F3> :call CscopeFind('g', expand('<cword>'))<CR>    " g: Find this definition
